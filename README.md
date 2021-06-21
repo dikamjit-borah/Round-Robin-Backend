@@ -10,6 +10,7 @@ Web application where an admin can schedule different batches for different teac
 ### Backend
 ### Postman Documentation
 
+## About the app
 ### Features
 - It is an app similar to google calendar where a user can do crud with  any number of teachers and batches.
 - A user can view the schedule weekly , monthly , and yearly . He can also filter the view by teacher name .
