@@ -9,6 +9,8 @@ Web application where an admin can schedule different batches for different teac
 ### Db
 ### Backend
 ### Postman Documentation
+#### GET /topics?week_start_date&?week_end_date 
+For the week view, we will be fetching topics for 7 days at a time
 
 ## About the app
 ### Features
