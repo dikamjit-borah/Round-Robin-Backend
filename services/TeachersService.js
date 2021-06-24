@@ -17,6 +17,28 @@ exports.fetch_week_view = async (teacher_id, week_start_date, week_end_date, res
     
   };
 
+
+
+  exports.fetch_day_view = async (teacher_id, scheduled_date, res) => {
+    const q = `SELECT * FROM schedules WHERE teacher_id = ? AND scheduled_date = ? ;`;
+  
+    db_connect.query(q, [teacher_id, scheduled_date], (err, result)=>{
+      if(err)
+        throw err;
+      else
+      {
+        console.log(result);
+        res.send(result)
+      }
+        
+    })
+    
+  };
+
+
+
+  
+
   exports.insert_into_schedules = async (user_inputs, res ) =>{
 
     console.log(user_inputs["scheduled_date"]);

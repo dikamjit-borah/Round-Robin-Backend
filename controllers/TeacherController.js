@@ -17,6 +17,16 @@ exports.get_week_data = async (req, res) => {
   };
   
 
+  exports.get_day_data = async (req, res) => {
+    
+
+    let teacher_id = req.query["teacher_id"]
+    let dateToFetch = req.query["the_date"]
+    console.log(teacher_id, dateToFetch);
+    let rows =  teacher_service.fetch_day_view(teacher_id, dateToFetch, res);
+  //  res.send({ status: 200, message: rows });
+  };
+  
   exports.add_new_schedule = async(req, res) =>{
     let schedule_id = new Date().valueOf()
     let teacher_id = req.body["teacher_id"]

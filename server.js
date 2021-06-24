@@ -7,7 +7,7 @@ const db_connect = require("./utilities/db_connect");
 const routes = require("./routes/Routes");
 
 const app = express();
-const port = 8080;
+const port =  process.env.PORT || 8080;
 
 var corsOptions = {
   origin: `http://localhost:${port}`,
