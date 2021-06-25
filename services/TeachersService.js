@@ -33,7 +33,26 @@ exports.fetch_week_view = async (teacher_id, week_start_date, week_end_date, res
         
     })
     
+
+
   };
+
+
+
+  exports.fetch_month_view = async (teacher_id, res) => {
+    const q = `SELECT scheduled_date, COUNT(scheduled_date) FROM schedules WHERE teacher_id = ? GROUP BY scheduled_date;`;
+  
+    db_connect.query(q, [teacher_id], (err, result)=>{
+      if(err)
+        throw err;
+      else
+      {
+        console.log(result);
+        res.send(result)
+      }
+        
+    })
+  }
 
 
 

@@ -26,6 +26,17 @@ exports.get_week_data = async (req, res) => {
     let rows =  teacher_service.fetch_day_view(teacher_id, dateToFetch, res);
   //  res.send({ status: 200, message: rows });
   };
+
+
+  exports.get_month_data = async (req, res) => {
+    let teacher_id = req.query["teacher_id"]
+    console.log("Fetching month data for ", teacher_id);
+    let rows =  teacher_service.fetch_month_view(teacher_id, res);
+  //  res.send({ status: 200, message: rows });
+  };
+  
+
+
   
   exports.add_new_schedule = async(req, res) =>{
     let schedule_id = new Date().valueOf()
