@@ -65,9 +65,9 @@ exports.fetch_week_view = async (teacher_id, week_start_date, week_end_date, res
 
     
 
-    const q1 = `SELECT scheduled_start_time, scheduled_end_time from schedules WHERE scheduled_date = ?`
+    const q1 = `SELECT scheduled_start_time, scheduled_end_time from schedules WHERE teacher_id = ? AND scheduled_date = ?`
 
-    db_connect.query(q1, [user_inputs[4]], (err, result) => {
+    db_connect.query(q1, [user_inputs[0], user_inputs[4]], (err, result) => {
       if(err)
         throw err;
       else{
