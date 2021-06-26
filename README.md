@@ -3,14 +3,22 @@ Web application where an admin can schedule different batches for different teac
 
 ## Demo
 ### Video
-### URL
+#### https://youtu.be/vt9hBDoTDJc
+### Live
+#### https://round-robin-scheduler.netlify.app/
+### Frontend Repo
+#### https://github.com/dikamjit-borah/Round-Robin-Frontend
 
 ## Hosting
 ### Db
+freedb.tech
 ### Backend
+Heroku
+### Frontend
+Netlify
+
 ### Postman Documentation
-#### GET /topics?week_start_date&?week_end_date 
-For the week view, we will be fetching topics for 7 days at a time
+https://documenter.getpostman.com/view/14877296/TzedhQco
 
 ## About the app
 ### Features
