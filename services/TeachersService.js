@@ -108,7 +108,7 @@ exports.fetch_week_view = async (teacher_id, week_start_date, week_end_date, res
       let start24 = convertTo24HrInt(arrayOfTimes[i]["scheduled_start_time"])
       let end24 = convertTo24HrInt(arrayOfTimes[i]["scheduled_end_time"])
 
-      if(scheduledStart24>=start24 && scheduledStart24<=end24)
+      if(scheduledStart24>=start24 && scheduledEnd24<=end24)
       {
         console.log("Did not insert because of time overlap");
         return false;
